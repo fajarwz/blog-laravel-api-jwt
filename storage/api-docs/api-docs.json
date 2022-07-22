@@ -1,0 +1,92 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Cool API",
+        "description": "An API of cool stuff",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/inspire": {
+            "get": {
+                "tags": [
+                    "Quote"
+                ],
+                "summary": "Get inspiring quote",
+                "operationId": "8302999e2decf59476dd7ca3c643968b",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "properties": {
+                                                "code": {
+                                                    "type": "number",
+                                                    "example": 200
+                                                },
+                                                "status": {
+                                                    "type": "string",
+                                                    "example": "success"
+                                                },
+                                                "message": {
+                                                    "type": "string",
+                                                    "example": "Quote fetched successfully."
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "quote": {
+                                                    "type": "string",
+                                                    "example": "\\n  <options=bold>“ The only way to do great work is to love what you do. ”</>\\n  <fg=gray>— Steve Jobs</>\\n"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "properties": {
+                                                "code": {
+                                                    "type": "number",
+                                                    "example": 500
+                                                },
+                                                "status": {
+                                                    "type": "string",
+                                                    "example": "error"
+                                                },
+                                                "message": {
+                                                    "type": "string",
+                                                    "example": "Server error."
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
