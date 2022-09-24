@@ -77,7 +77,7 @@ class AuthController extends Controller
                 'meta' => [
                     'code' => 200,
                     'status' => 'success',
-                    'message' => 'Quote fetched successfully.',
+                    'message' => 'Login success.',
                 ],
                 'data' => [
                     'user' => auth()->user(),
